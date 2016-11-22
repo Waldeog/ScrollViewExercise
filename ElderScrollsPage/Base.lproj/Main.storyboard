@@ -38,29 +38,50 @@
                                     <constraint firstAttribute="height" constant="187" id="kDE-xe-8Po"/>
                                 </constraints>
                             </imageView>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kVP-mH-Erc">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kVP-mH-Erc">
+                                <rect key="frame" x="72.5" y="0.0" width="230" height="667"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="230" id="wNZ-7W-2xQ"/>
+                                </constraints>
                             </scrollView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="kVP-mH-Erc" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="0gm-bf-vzj"/>
                             <constraint firstAttribute="trailing" secondItem="8my-Rn-oJU" secondAttribute="trailing" id="2WB-xW-SXK"/>
                             <constraint firstAttribute="trailing" secondItem="JhM-J1-anA" secondAttribute="trailing" id="5DH-BG-hEY"/>
                             <constraint firstItem="8my-Rn-oJU" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="5d9-GD-T3X"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="JhM-J1-anA" secondAttribute="bottom" id="Qfd-fC-06I"/>
+                            <constraint firstItem="rz0-Hh-jfz" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="IhY-BT-6gq"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="kVP-mH-Erc" secondAttribute="bottom" id="NZU-oI-S8C"/>
                             <constraint firstItem="JhM-J1-anA" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Wy5-x3-apI"/>
-                            <constraint firstItem="kVP-mH-Erc" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="YBc-Sy-gse"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="8my-Rn-oJU" secondAttribute="bottom" id="kgp-Nz-g7f"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="JhM-J1-anA" secondAttribute="bottom" id="nRC-ta-k21"/>
+                            <constraint firstItem="kVP-mH-Erc" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="oSg-xN-JTd"/>
                             <constraint firstItem="8my-Rn-oJU" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="tUl-M2-pyT"/>
-                            <constraint firstAttribute="trailing" secondItem="kVP-mH-Erc" secondAttribute="trailing" id="v3L-Eu-six"/>
                             <constraint firstItem="rz0-Hh-jfz" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="wnf-lQ-HTS"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="kVP-mH-Erc" secondAttribute="bottom" id="xbe-ol-BGO"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="8my-Rn-oJU" secondAttribute="bottom" id="ykd-qa-fzm"/>
-                            <constraint firstItem="rz0-Hh-jfz" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="yuW-WC-leW"/>
                         </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="2ty-ji-6aD" appends="YES" id="tLc-ax-OBe"/>
+                            <outletCollection property="gestureRecognizers" destination="GEt-CP-hYg" appends="YES" id="87b-qC-UTA"/>
+                        </connections>
                     </view>
+                    <connections>
+                        <outlet property="controllerView" destination="8bC-Xf-vdC" id="OzN-mi-yAj"/>
+                        <outlet property="scrollView" destination="kVP-mH-Erc" id="vQl-Qe-LeZ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="left" id="2ty-ji-6aD">
+                    <connections>
+                        <action selector="detectSwipe:" destination="BYZ-38-t0r" id="Ley-AJ-EXh"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="right" id="GEt-CP-hYg">
+                    <connections>
+                        <action selector="detectSwipe:" destination="BYZ-38-t0r" id="grC-ZZ-XL9"/>
+                    </connections>
+                </swipeGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="136.80000000000001" y="137.18140929535232"/>
         </scene>
